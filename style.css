@@ -19,23 +19,11 @@
 
 /* Kort med billeder skal have nul padding, men deres indhold skal matche padding’en fra de øvrige kort. */
 .card:has(img) {
-  display: grid;
-  grid-template-columns: 1rem auto 1rem;
   padding: 0;
-}
-.card:has(img) > * {
-  grid-column: 2;
-}
-.card:has(img) img {
-  width: 100%;
-  grid-column: 1 / 4;
-}
-.card:has(img) .content {
-  padding: 1rem 0;
-}
 
-.card:has(img):last-of-type img {
-  margin-bottom: -1.9rem;
+  .content {
+    padding: 1rem;
+  }
 }
 
 @layer reset, cards;
