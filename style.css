@@ -54,3 +54,20 @@ section {
     grid-row: 3;
   }
 }
+
+@media (max-width: 600px) {
+  section {
+    grid-template-columns: 1fr;
+
+    .content {
+      grid-column: 1/-1;
+    }
+
+    figure {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+
+      grid-template-rows: 1fr auto;
+    }
+  }
+}
