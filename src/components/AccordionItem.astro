@@ -33,9 +33,20 @@ const { id, question, answer, linkBlock } = props;
 </li>
 
 <style>
+  article:has([aria-expanded="true"]) {
+  /*...*/
+  .vertical-line {
+    rotate: z 90deg;
+  }
+  .answer {
+    max-height: 130px;
+   
+  }
+}
   article {
     color: hsl(190 30% 12%);
     border-bottom: 1px solid #dadada;
+    
 
     h3 {
       font-weight: 700;
@@ -69,6 +80,10 @@ const { id, question, answer, linkBlock } = props;
 
     .answer {
       color: #595566;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height ease 0.6s;
+      
 
       > * + * {
         margin-top: 1em;

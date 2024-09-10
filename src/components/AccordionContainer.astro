@@ -10,6 +10,12 @@ const { data, exclusive } = Astro.props;
   </ul>
 </section>
 
+<section class="accordion-container" data-exclusive={exclusive}>
+  <ul>
+    {data.map((props) => <AccordionItem {...props} />)}
+  </ul>
+</section>
+
 <style>
   section {
     padding-block: 3rem;
